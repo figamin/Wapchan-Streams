@@ -16,7 +16,7 @@ var adPercent = 0.1;
 
 var Favicon_URL = `${SCRIPT_FOLDER_URL}/Images/tiger.png`;
 
-var ChannelName_Caption = '25 Days of Autism';
+var ChannelName_Caption = 'Azumanga Daioh Marathon!';
 
 var TitleBarDescription_Caption = '>Streaming:';
 
@@ -1563,7 +1563,7 @@ currenttimebtn = $('<button id="findtime" class="btn btn-xs btn-default" title="
     }
   });
 
-$('<span id="maxusers" title="Maximum Autists">' + MAXUSERS + ' max autists</span>')
+$('<span id="maxusers" title="Maximum Osakanons">' + MAXUSERS + ' max osakanons</span>')
   .appendTo("#chatheader")
 
 Callbacks.usercount = function (count) {
@@ -1576,7 +1576,7 @@ Callbacks.usercount = function (count) {
 
   if (MAXUSERS < count) {
     MAXUSERS = count;
-    $("#maxusers").text(MAXUSERS + " max autists");
+    $("#maxusers").text(MAXUSERS + " max osakanons");
     setOpt(CHANNEL.name + "_MAXUSERS" + (new Date().getFullYear()), MAXUSERS);
   }
 };
