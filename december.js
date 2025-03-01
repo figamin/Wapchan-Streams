@@ -14,7 +14,7 @@ SCRIPT_FOLDER_URL = SCRIPT_FOLDER_URL.join('/');
 
 var adPercent = 0.1;
 
-var Favicon_URL = `${SCRIPT_FOLDER_URL}/Images/tiger.png`;
+var Favicon_URL = `${SCRIPT_FOLDER_URL}/Images/osakacon.png`;
 
 var ChannelName_Caption = 'Azumanga Daioh Marathon!';
 
@@ -1563,12 +1563,12 @@ currenttimebtn = $('<button id="findtime" class="btn btn-xs btn-default" title="
     }
   });
 
-$('<span id="maxusers" title="Maximum Osakanons">' + MAXUSERS + ' max osakanons</span>')
+$('<span id="maxusers" title="Maximum Azumanganons">' + MAXUSERS + ' max azumanganons</span>')
   .appendTo("#chatheader")
 
 Callbacks.usercount = function (count) {
   CHANNEL.usercount = count;
-  var text = count + " autist";
+  var text = count + " azumanganon";
   if (count != 1) {
     text += "s";
   }
@@ -1576,7 +1576,7 @@ Callbacks.usercount = function (count) {
 
   if (MAXUSERS < count) {
     MAXUSERS = count;
-    $("#maxusers").text(MAXUSERS + " max osakanons");
+    $("#maxusers").text(MAXUSERS + " max azumanganons");
     setOpt(CHANNEL.name + "_MAXUSERS" + (new Date().getFullYear()), MAXUSERS);
   }
 };
@@ -2149,8 +2149,6 @@ if (Math.abs(timeDiff) < 1000) {
 function countdown(element) {
   //set up
   var Month = 0, Day = 0, Hour = 0, Minute = 0, Seconds = 0, isToradora = false;
-  element.append('<h3 id="countdowntitle" align="center">Time until Stream</h3>');
-  element.append('<h1 id="countdown" align="center">' + Month + ' : ' + Day + ' : ' + Hour + ' : ' + Minute + ' : ' + Seconds + '</h1>');
 
   setInterval(function () { //updates every second
     time();
