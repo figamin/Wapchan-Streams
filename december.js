@@ -810,7 +810,6 @@ if (USEROPTS.hidevid) {
 }
 
 //Team Colour
-$('head').append('<script type="text/javascript" src="' + `${SCRIPT_FOLDER_URL}/teamcolor.js` + '">');
 
 // changing initial layout to compact
 $("body").addClass('fluid');
@@ -4905,20 +4904,6 @@ $('<button id="effectsbtn" class="btn btn-sm ' + (EFFECTSOFF ? 'btn-danger' : 'b
   });
 
 //checkEffects();
-
-
-spambtn = $('<button id="spambtn" class="btn btn-sm ' + (ANTISPAM ? 'btn-danger' : 'btn-default') + '" title="Blocks all unicode characters and duplicate words during shows. Red means it is blocking.">アミ a m i あみ</button>')
-  .appendTo("#chatwrap")
-  .on("click", function () {
-    ANTISPAM = !ANTISPAM;
-    setOpt(CHANNEL.name + "_ANTISPAM", ANTISPAM);
-    if (ANTISPAM) {
-      this.className = "btn btn-sm btn-danger";
-    } else {
-      this.className = "btn btn-sm btn-default";
-    }
-  });
-
 
 /**
  * Usage: /arcade_theme
