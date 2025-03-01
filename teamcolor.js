@@ -11,7 +11,6 @@ function setTeamList(listOfTeams){
 	});
 };
 
-$('#chatwrap').append("<span><select id='teamcolor' style='cursor:default;padding:6px 10px' class='btn btn-sm btn-default'><option value=''>Chat Icon</option></select></span>");
 var TEAMCOLOR = getOrDefault(CHANNEL.name + "_TEAMCOLOR", '');
 setTeamList(teamList_4cc);
 if (TEAMCOLOR){
